@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add course</title>
+</head>
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{message}}
+    </div>
+    
+    <h3>Add course</h3>
+    <form action="{{ url_for("new_course") }}" method="post">
+        <label for="name">Code</label>
+        <input type="text" name="course_code">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

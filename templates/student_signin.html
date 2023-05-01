@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="all">
+        {% if message|length %}
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{message}}
+        </div>
+        {% endif %}
+        <form action="{{ url_for("student_login") }}" method="post">
+            <h1>Log in</h1>
+            <label for="student_id">Student ID</label>
+            <input type="text" name="student_id">
+
+            <label for="password">Password</label>
+            <input type="password" name="password">
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Have no account?</p><a href="/student_signup">sign up</a>
+    </div>
+</body>
+
+</html>

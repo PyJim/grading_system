@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/student.css">
+    <title>{{teacher[2]}}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+        
+            <div class="image">
+                <img src="/static/images/logo.png" alt="school logo">
+            </div>
+        
+            <div class="student_details">
+                <p id="name">{{ teacher[1] }}</p>
+                <p>{{ teacher[2] }}</p>
+            </div>
+        </div>
+
+
+        <div class="middle">
+        
+            <div class="acad_records">
+                <p>{{teacher[2]}}</p>
+            </div>
+        
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Student</th>
+                        <th>IA Score (40%)</th>
+                        <th>Exam Score (60%)</th>
+                        <th>Total Score (100%)</th>
+                        <th>Grade</th>
+                    </tr>
+                    {% for student in students %}
+                    <tr>
+                        <td><a href="/edit_grades/{{student[1]}}">{{student[1]}}</a></td>
+                        <td><a href="/edit_grades/{{student[1]}}">{{student[2]}}</a></td>
+                        <td><a href="/edit_grades/{{student[1]}}">{{student[3]}}</a></td>
+                        <td><a href="/edit_grades/{{student[1]}}">{{student[4]}}</a></td>
+                        <td><a href="/edit_grades/{{student[1]}}">{{student[5]}}</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+        
+            </div>
+        
+        
+        </div>
+
+        <div class="down">
+            <div class="copyright">
+                <p>&copy</p>
+            </div>
+        
+            <div class="school">
+                <p>School Name</p>
+                <p>Contact</p>
+            </div>
+        
+            <div class="logout">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        
+        
+    </div>
+        
+        
+        
+</body>
+    
+
+

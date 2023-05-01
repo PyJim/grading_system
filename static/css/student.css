@@ -1,0 +1,102 @@
+body{
+    background-color: white;
+    font-family: 'poppins';
+    color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    box-shadow: black 5px;
+    padding: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.image{
+    align-items: left;
+    text-align: left;
+    margin-left: 20px;
+}
+.image img{
+    width: 70px;
+    height: 70px;
+}
+.student_details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 20px;
+}
+#name{
+    text-transform: uppercase;
+}
+
+
+
+
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    margin: 50px 0px;
+}
+table{
+    border-spacing: 0px;
+}
+th, td{
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+.acad_records p{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+.table{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.btn, .button{
+    width: 50px;
+    height: 20px;
+    background-color: rgb(79, 12, 43);
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.down{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    font-size: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+.school{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.school p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.logout{
+    text-align: right;
+}

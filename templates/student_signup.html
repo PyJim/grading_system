@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+    <title>Sign up</title>
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{message}}
+        </div>
+
+        <form action="{{ url_for("student_signup") }}" method="post">
+            <h1>Sign Up</h1>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <label for="index_number">Index Number</label>
+            <input type="text" name="index_number">
+            <label for="student_id">Student ID</label>
+            <input type="text" name="student_id">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password">
+            <button type="submit">Sign up</button>
+        </form>
+
+        <p>Already have an account?</p><a href="/student_login">login</a>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/student.css">
+    <title>{{student[2]}}</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="top">
+        
+            <div class="image">
+                <img src="/static/images/logo.png" alt="school logo">
+            </div>
+        
+            <div class="student_details">
+                <p id="name">{{ student[1] }}</p>
+                <p>{{ student[2] }}</p>
+            </div>
+        </div>
+
+
+        <div class="middle">
+        
+            <div class="acad_records">
+                <p>Academic Records</p>
+            </div>
+        
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>IA Score (40%)</th>
+                        <th>Exam Score (60%)</th>
+                        <th>Total Score (100%)</th>
+                        <th>Grade</th>
+                    </tr>
+                    {% for course in courses %}
+                        <tr>
+                            <td><a href="#">{{course[1]}}</a></td>
+                            <td><a href="#">{{course[2]}}</a></td>
+                            <td><a href="#">{{course[3]}}</a></td>
+                            <td><a href="#">{{course[4]}}</a></td>
+                            <td><a href="#">{{course[5]}}</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                
+                <br>
+                <div class="button">
+                    <form action="{{ url_for("student", id=student[2]) }}" method="post">
+                        <button type="submit" class="btn">Add course</button>
+                    </form>
+                </div>
+            </div>
+        
+        
+        </div>
+
+        <div class="down">
+            <div class="copyright">
+                <p>&copy</p>
+            </div>
+        
+            <div class="school">
+                <p>School Name</p>
+                <p>Contact</p>
+            </div>
+        
+            <div class="logout">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+
+</body>
+
+</html>
