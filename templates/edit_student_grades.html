@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="{{ url_for("edit_grades", id=student_id) }}" method="post">
+    <form action="/edit_grades/{{student_id}}" method="post">
         <h1>Edit Grades</h1>
         <label for="ia_score">IA Score (40%)</label>
         <input type="number" name="ia_score">

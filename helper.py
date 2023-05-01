@@ -27,4 +27,4 @@ def db_execute(query, args=()):
     conn = get_db()
     conn.execute(query, args)
     conn.commit()
-    conn.close()
+    #conn.close()

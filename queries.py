@@ -162,20 +162,20 @@ def get_grade(score):
 
 def edit_student_grades(student_id, course_code, IA, exam):
     try:
-        total = IA + exam
+        total = float(IA) + float(exam)
     except:
         total = None
 
     grade = get_grade(total)
 
-    connection = sqlite3.connect('database.db')
-    query = f"""UPDATE {course_code} (Student_id, IA_SCORE, EXAM_SCORE, TOTAL, GRADE) VALUES (?, ?, ?, ?, ?);"""
-    connection.execute(query, [student_id, IA, exam, total, grade])
-    connection.commit()
-    query2 = f"""UPDATE {student_id} (Course, IA_SCORE, EXAM_SCORE, TOTAL, GRADE) VALUES (?, ?, ?, ?, ?);"""
-    connection.execute(query2, [course_code, IA, exam, total, grade])
-    connection.commit()
-    connection.close()
+    #connection = sqlite3.connect('database.db')
+    query = f"""UPDATE {course_code} SET IA_SCORE = ?, EXAM_SCORE = ?, TOTAL=?, GRADE=? WHERE Student_id=?;"""
+    db_execute(query, [IA, exam, total, grade, student_id])
+    #connection.commit()
+    query2 = f"""UPDATE {student_id} SET IA_SCORE = ?, EXAM_SCORE = ?, TOTAL=?, GRADE=? WHERE Course=?;"""
+    
+    db_execute(query2, [IA, exam, total, grade, course_code])
+    
     
 
     

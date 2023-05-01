@@ -226,14 +226,12 @@ def new_course():
         return render_template('student.html', student=student, courses=courses)
 
 @app.route('/edit_grades/<id>', methods=['GET', 'POST'])
-def edit_grades(id):
+def grades_change(id):
     if request.method == 'POST':
         ia_score = request.form.get('ia_score')
         exam_score = request.form.get('exam_score')
         course_code = teacher[2]
         student_id = id
-        print(student_id)
-        print(course_code)
         edit_student_grades(student_id, course_code, ia_score, exam_score)
         students = []
         all_students = get_students_by_course(course_code)
@@ -241,11 +239,12 @@ def edit_grades(id):
             students.append(list(student))
         
         return render_template('teacher.html', students=students, teacher=teacher, course_code=course_code, student_id=student_id)
-    course_code = teacher[2]
-    student_id = id
-    grades = get_student_grades(student_id, course_code)
-    print(list(grades))
-    return render_template('edit_student_grades.html', grades=grades)
+    
+    else:
+        course_code = teacher[2]
+        student_id = id
+        grades = get_student_grades(student_id, course_code)
+        return render_template('edit_student_grades.html', grades=grades, student_id=student_id)
 
 
 if __name__ == '__main__':
