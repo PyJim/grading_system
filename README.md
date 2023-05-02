@@ -41,6 +41,13 @@ This app has been hosted at {Hosting Services}. Visit {URL} to try it out.
 ## Conclusion
 The Online Grading System is an easy-to-use, efficient tool for tracking academic progress. It provides a platform for both teachers and students to manage grades and courses.
 
-### Developers contact details
-- ......................
-- ......................
+### Image description of the workflow
+
+1. ![](image/Screenshot%20(174).png)
+2. ![](image/Screenshot%20(175).png)
+3. ![](image/Screenshot%20(176).png)
+4. ![](image/Screenshot%20(177).png)
+5. ![](image/Screenshot%20(178).png)
+6. ![](image/Screenshot%20(179).png)
+7. ![](image/Screenshot%20(180).png)
+8. ![](image/Screenshot%20(181).png)
