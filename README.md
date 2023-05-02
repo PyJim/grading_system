@@ -51,3 +51,8 @@ The Online Grading System is an easy-to-use, efficient tool for tracking academi
 6. ![](image/Screenshot%20(179).png)
 7. ![](image/Screenshot%20(180).png)
 8. ![](image/Screenshot%20(181).png)
+
+### Future Updates
+1. Student verification and acceptance or rejection by course intructors.
+2. Regrade requests.
+3. Hosting the platform on an actual hosting site.
