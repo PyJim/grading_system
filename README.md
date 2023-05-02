@@ -1,4 +1,4 @@
-# Online Grading System Documentation
+# Online Grading System Documentation (GradeWise)
 ## Introduction
 The Online Grading System is a web-based application that allows users to register for courses and track their academic progress. The application is built using Python Flask framework and SQLite3 database.
 
@@ -36,7 +36,7 @@ To start the server, run the following command in your terminal:
 Open your browser and navigate to http://localhost:5000/ to access the login page.
 
 ### Web Version
-This app has been hosted at {Hosting Services}. Visit {URL} to try it out.
+This app will soon be hosted and made accessible for all.
 
 ## Conclusion
 The Online Grading System is an easy-to-use, efficient tool for tracking academic progress. It provides a platform for both teachers and students to manage grades and courses.
