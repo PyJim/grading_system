@@ -43,19 +43,32 @@ The Online Grading System is an easy-to-use, efficient tool for tracking academi
 
 ### Image description of the workflow
 
-1. ![](image/Screenshot%20(174).png)
-2. ![](image/Screenshot%20(175).png)
-3. ![](image/Screenshot%20(176).png)
-4. ![](image/Screenshot%20(177).png)
-5. ![](image/Screenshot%20(178).png)
-6. ![](image/Screenshot%20(179).png)
-7. ![](image/Screenshot%20(180).png)
-8. ![](image/Screenshot%20(181).png)
+Homepage
+ ![](image/Screenshot%20(174).png)
+
+Signup
+ ![](image/Screenshot%20(175).png)
+
+Login
+ ![](image/Screenshot%20(176).png)
+
+Instructor account page
+ ![](image/Screenshot%20(178).png)
+
+Edit grades page
+ ![](image/Screenshot%20(179).png)
+
+Student account page
+ ![](image/Screenshot%20(180).png)
+
+Add course page
+ ![](image/Screenshot%20(181).png)
 
 ### Future Updates
 1. Student verification and acceptance or rejection by course intructors.
 2. Regrade requests.
 3. Hosting the platform on an actual hosting site.
+4. Allowing for accounts to be deleted
 
 ###
 Here is a video demo of the project
