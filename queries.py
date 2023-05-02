@@ -117,6 +117,8 @@ def get_student_courses(student_id):
     return result
 
 def add_new_course_for_student(student_id, course_code):
+    if course_code is None or course_code=='':
+        return render_template('new_course.html', message='Fill all available fields')
     query1 = f"""SELECT * FROM COURSES WHERE code =?;"""
     query2 = f"""SELECT * FROM {student_id} WHERE Course =?"""
     result1 = db_query(query1, [course_code])
@@ -138,6 +140,8 @@ def add_new_course_for_student(student_id, course_code):
     return render_template('new_course.html', message=message)
 
 def add_new_student_to_course(student_id, course_code):
+    if course_code is None or course_code == '':
+        return render_template('new_course.html', message='Fill all available fields')
     connection = sqlite3.connect('database.db')
     query = f"""INSERT INTO {course_code} (Student_id) VALUES (?);"""
     connection.execute(query, [student_id])

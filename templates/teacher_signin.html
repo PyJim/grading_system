@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
     <title>login</title>
 </head>
 
 <body>
-    <div class="all">
+    <div class="logo">
+        <img src="/static/images/logo.png" alt="">
+    </div>
+    <div class="container">
         {% if message|length %}
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -19,16 +22,36 @@
         {% endif %}
         <form action="{{ url_for("teacher_login") }}" method="post">
             <h1>Log in</h1>
-            <label for="course_code">Course Code</label>
-            <input type="text" name="course_code">
+            <div class="label">
+                <label for="course_code">Course Code</label>
+                <input type="text" name="course_code">
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password" name="password">
+            <div class="label">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            
 
-            <button type="submit">Login</button>
+            <button type="submit" class="button">Login</button>
         </form>
 
-        <p>Have no account?</p><a href="/teacher_signup">sign up</a>
+        <p>Have no account?</p><a href="/teacher_signup" id="no_decoration">sign up</a>
+
+        <div class="down">
+            <div class="copyright">
+                <p>&copy</p>
+            </div>
+        
+            <div class="school">
+                <p>GradeWise</p>
+                <p>+233440000000</p>
+            </div>
+        
+            <div class="footer_logo">
+                <img src="/static/images/logo.png" alt="">
+            </div>
+        </div>
     </div>
 </body>
 

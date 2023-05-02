@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
     <title>Sign up</title>
 </head>
 
 <body>
+    <div class="logo">
+        <img src="/static/images/logo.png" alt="">
+    </div>
 
-    <div class="all">
+    <div class="container">
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             {{message}}
@@ -19,21 +22,51 @@
 
         <form action="{{ url_for("student_signup") }}" method="post">
             <h1>Sign Up</h1>
-            <label for="name">Name</label>
-            <input type="text" name="name">
-            <label for="index_number">Index Number</label>
-            <input type="text" name="index_number">
-            <label for="student_id">Student ID</label>
-            <input type="text" name="student_id">
-            <label for="password">Password</label>
-            <input type="password" name="password">
-            <label for="confirm_password">Confirm Password</label>
-            <input type="password" name="confirm_password">
-            <button type="submit">Sign up</button>
+            <div class="label">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+
+            <div class="label">
+                <label for="index_number">Index Number</label>
+                <input type="text" name="index_number">
+            </div>
+            
+            <div class="label">
+                <label for="student_id">Student ID</label>
+                <input type="text" name="student_id">
+            </div>
+            
+            <div class="label">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            
+            <div class="label">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password">
+            </div>
+            
+            <button type="submit" class="button">Sign up</button>
         </form>
 
-        <p>Already have an account?</p><a href="/student_login">login</a>
+        <p>Already have an account?</p><a href="/student_login" id="no_decoration">login</a>
 
+
+        <div class="down">
+            <div class="copyright">
+                <p>&copy</p>
+            </div>
+        
+            <div class="school">
+                <p>GradeWise</p>
+                <p>+233440000000</p>
+            </div>
+        
+            <div class="footer_logo">
+                <img src="/static/images/logo.png" alt="">
+            </div>
+        </div>
     </div>
 </body>
 

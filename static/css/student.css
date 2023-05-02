@@ -1,7 +1,7 @@
 body{
-    background-color: white;
+    background-color: #1e1e1e;
     font-family: 'poppins';
-    color: black;
+    color: white;
 }
 
 .container{
@@ -54,12 +54,13 @@ th, td{
     width: 150px;
     text-align: center;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 .acad_records p{
     font-size: 24px;
     text-align: center;
     font-weight: bold;
+    color: #FFE600;
 }
 .table{
     justify-content: center;
@@ -67,12 +68,25 @@ th, td{
     margin: auto;
 }
 .btn, .button{
-    width: 50px;
-    height: 20px;
-    background-color: rgb(79, 12, 43);
+    text-decoration: none;
     color: white;
-    align-items: center;
+    width: 150px;
+    height: 30px;
+    background-color: #03A813;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    transform: translate(1.5);
+    color: #FFE600;
 }
 
 
@@ -99,4 +113,7 @@ th, td{
 
 .logout{
     text-align: right;
+}
+H1{
+    color: #FFE600;
 }
